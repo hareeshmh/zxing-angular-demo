@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zxing-angular-demo"
+    }
+  },
+  "defaultProject": "zxing-angular-demo",
+  "cli": {
+    "analytics": "e42086e1-52ef-4f57-8366-876f4383ee6c"
+  }
 }
