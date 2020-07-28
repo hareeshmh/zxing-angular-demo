@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'zxing-angular-demo';
+  barcode = '';
+  
+
+  myFn(resultString) {
+    console.log(resultString);
+    this.barcode = resultString;
+  }
+
 }
