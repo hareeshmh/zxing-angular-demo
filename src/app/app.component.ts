@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  @ViewChild('scanner') scanner: ZXingScannerComponent;
+  availableDevices: MediaDeviceInfo[] = [];
   title = 'zxing-angular-demo';
   barcode = '';
-  
 
-  myFn(resultString) {
+  ngOnInit(): void {
+
+  }
+
+
+  myFn(resultString: string): void {
     console.log(resultString);
     this.barcode = resultString;
   }

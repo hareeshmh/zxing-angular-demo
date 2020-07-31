@@ -39,8 +39,7 @@
   </div>
 
   <!-- Resources -->
-  <h2>Scan for results</h2>
   <p>Result : {{barcode}}</p>
-  <zxing-scanner #scanner start="true" (scanSuccess)="myFn($event)" [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']"></zxing-scanner>
+  <zxing-scanner #scanner  (scanSuccess)="myFn($event)" [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']"></zxing-scanner>
 
 <router-outlet></router-outlet>
